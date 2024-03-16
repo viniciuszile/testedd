@@ -1,0 +1,250 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    position: fixed;
+    top: 0; /* Fixar o cabeçalho ao topo */
+}
+
+body {
+  background-image: url('Assets/fundo.png');
+  background-size: 1450px 800px; /* Largura e altura desejadas para a imagem */
+  background-position: center; /* Centraliza a imagem */
+}
+
+
+.container_body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.616);
+
+}
+
+
+/* Contador/placar */
+.container_contador {
+    margin-left: 80%;
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+
+    text-align: center;
+    padding: 10px;
+    border-radius: 40px;
+    border: solid 2px rgb(0, 0, 0);
+    box-shadow:20px 10px black;
+}
+
+.container_contador h1{
+  color: red;
+}
+
+.container_contador p{
+  color: red;
+  font-size: 50px;
+}
+
+
+
+.quiz-container {
+    width: 500px;
+    height: 600px;
+    margin-top: 100px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e9e7e7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.image-container {
+    width: 300px; /* Largura desejada para o container da imagem */
+    height: 300px; /* Altura automática para manter a proporção da imagem */
+    background-color: red;
+}
+
+.image-container img {
+    max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garantir que a imagem não ultrapasse a altura do container */
+    width: 300px;
+    height: 300px;
+}
+
+.question p{
+    font-size: x-large;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+}
+
+
+.options label {
+    width: 300px;
+    font-size: large;
+    display: flex; /* Usando flexbox para alinhar o checkbox e o texto */
+    align-items: center; /* Alinhar os itens verticalmente */
+    margin-bottom: 20px; /* Espaçamento entre cada opção */
+    border: solid black 1px; /* Adiciona borda à cada rótulo */
+    border-radius: 50px; /* Arredonda os cantos da borda */
+    padding: 10px; /* Adiciona preenchimento interno ao rótulo */
+}
+
+.options label input[type="radio"] {
+    margin-right: 10px; /* Adiciona margem à direita do checkbox */
+}
+
+.options label {
+    font-size: x-large;
+    display: flex; /* Usando flexbox para alinhar o checkbox e o texto */
+    align-items: center; /* Alinhar os itens verticalmente */
+    margin-bottom: 10px; /* Espaçamento entre cada opção */
+}
+
+.options label input[type="radio"] {
+    margin-right: 10px; /* Adiciona margem à direita do checkbox */
+}
+
+
+
+
+
+/* fazer as coisas rbg */
+
+header:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  header:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+.button-85 {
+    width: 100px;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: white;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
